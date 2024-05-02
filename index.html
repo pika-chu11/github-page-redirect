@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        var mobileUrl = 'https://pika-chu11.github.io/github-page-test-1/'; // Change this to your mobile page URL
+        var desktopUrl = 'https://pika-chu11.github.io/github-page-test-2/'; // Change this to your desktop page URL
+
+        // Regular expression to detect mobile devices
+        var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase());
+        
+        // Redirect to the mobile or desktop version
+        if (isMobile) {
+            window.location.href = mobileUrl;
+        } else {
+            window.location.href = desktopUrl;
+        }
+      });
+    </script>
+</head>
+<body>
+    <p>Loading...</p>
+</body>
+</html>
